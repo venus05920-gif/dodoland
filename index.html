@@ -2,341 +2,264 @@
 <html class="dark" lang="ko"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>도도랜드 | 오도현 국어 — 대시보드</title>
+<title>오도현 국어 · Dodo Land — 이기는 프레임[NODE]</title>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <script id="tailwind-config">
       tailwind.config = {
         darkMode: "class",
         theme: { extend: {
-            "colors": {"background":"#0a0f1a","surface":"#0a0f1a","surface-bright":"#1a2336","surface-dim":"#060a12","surface-container-lowest":"#0c121e","surface-container-low":"#111827","surface-container":"#161f30","surface-container-high":"#1d2840","surface-container-highest":"#25324d","surface-variant":"#1d2840","surface-tint":"#22c55e","on-surface":"#e6ebf4","on-surface-variant":"#aab4c6","on-background":"#e6ebf4","outline":"#6b7791","outline-variant":"#2b3852","primary":"#22c55e","on-primary":"#ffffff","primary-container":"#15803d","on-primary-container":"#dcfce7","primary-fixed":"#14271a","primary-fixed-dim":"#86efac","on-primary-fixed":"#dcfce7","on-primary-fixed-variant":"#bbf7d0","secondary":"#2dd4bf","on-secondary":"#00312a","secondary-container":"#0c4a3f","on-secondary-container":"#c6f6ec","secondary-fixed":"#0c4a3f","secondary-fixed-dim":"#2dd4bf","on-secondary-fixed":"#c6f6ec","on-secondary-fixed-variant":"#9af0dd","tertiary":"#ffb86b","on-tertiary":"#3a2600","tertiary-container":"#5a3b00","on-tertiary-container":"#ffe2bf","tertiary-fixed":"#ffddb8","tertiary-fixed-dim":"#ffb86b","on-tertiary-fixed":"#2a1700","on-tertiary-fixed-variant":"#653e00","error":"#ff9d94","on-error":"#5a1a16","error-container":"#5a1a16","on-error-container":"#ffdad4","inverse-surface":"#e6ebf4","inverse-on-surface":"#0a0f1a","inverse-primary":"#15803d"},
-            "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
-            "spacing": { "stack-gap-sm": "8px", "stack-gap-lg": "24px", "stack-gap-md": "16px", "container-padding": "20px", "unit": "4px", "gutter": "16px" },
-            "fontFamily": { "headline-md": ["Plus Jakarta Sans"], "body-sm": ["Inter"], "body-md": ["Inter"], "label-sm": ["Inter"], "display-lg": ["Plus Jakarta Sans"], "label-md": ["Inter"], "headline-sm": ["Plus Jakarta Sans"], "body-lg": ["Inter"] },
-            "fontSize": {
-                "headline-md": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
-                "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
-                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
-                "label-sm": ["11px", {"lineHeight": "14px", "fontWeight": "500"}],
-                "display-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
-                "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
-                "headline-sm": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
-                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}]
-            }
+            "colors": {"background":"#06120c","surface":"#06120c","surface-container-lowest":"#0a1a11","surface-container-low":"#0c1f14","surface-container":"#102718","surface-container-high":"#143420","surface-container-highest":"#1b462b","on-surface":"#e8f5ec","on-surface-variant":"#9db8a7","outline":"#3a5a45","outline-variant":"#1f3a29","primary":"#22c55e","on-primary":"#04130a","primary-container":"#15803d","on-primary-container":"#dcfce7","primary-fixed-dim":"#86efac","secondary":"#2dd4bf","on-secondary":"#00312a","secondary-container":"#0c4a3f","on-secondary-container":"#c6f6ec","tertiary":"#ffcf6b","on-tertiary":"#3a2600","tertiary-container":"#4a3500","on-tertiary-container":"#ffe9bf","error":"#ff9d94","kakao":"#fee500","on-kakao":"#191600"},
+            "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "3xl": "1.5rem", "full": "9999px" },
+            "fontFamily": { "head": ["Plus Jakarta Sans","Inter","sans-serif"], "body": ["Inter","sans-serif"] }
           } }
       }</script>
 <style>
-        body { background-color: #0a0f1a; color: #e6ebf4; overflow-x: hidden; }
+        html { scroll-behavior: smooth; }
+        body { background-color: #06120c; color: #e8f5ec; overflow-x: hidden; font-family: Inter, sans-serif; }
+        .hero-bg {
+            background:
+              radial-gradient(55% 45% at 78% 18%, rgba(34,197,94,0.22), transparent 70%),
+              radial-gradient(45% 40% at 12% 28%, rgba(45,212,191,0.12), transparent 70%),
+              radial-gradient(60% 60% at 50% 120%, rgba(21,128,61,0.18), transparent 70%),
+              linear-gradient(180deg, #06120c 0%, #07150d 100%);
+        }
+        .grad-text { background: linear-gradient(100deg,#bbf7d0 0%,#34d399 45%,#22c55e 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+        .card { background: linear-gradient(160deg, rgba(20,52,32,0.55), rgba(10,26,17,0.75)); border: 1px solid rgba(134,239,172,0.12); backdrop-filter: blur(10px); }
+        .card-glow:hover { border-color: rgba(134,239,172,0.4); box-shadow: 0 12px 40px rgba(34,197,94,0.16); }
+        .ring-soft { box-shadow: 0 0 0 1px rgba(134,239,172,0.10), 0 10px 40px rgba(0,0,0,0.45); }
         .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
-        .custom-scrollbar::-webkit-scrollbar { width: 6px; }
-        .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
-        .custom-scrollbar::-webkit-scrollbar-thumb { background: #25324d; border-radius: 10px; }
-        .glass-card { background: rgba(18, 26, 43, 0.55); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.06); }
+        .reveal { opacity: 0; transform: translateY(24px); transition: all .7s cubic-bezier(.2,.8,.2,1); }
+        .reveal.in { opacity: 1; transform: none; }
+        .avatar-ring { background: conic-gradient(from 140deg, #22c55e, #2dd4bf, #86efac, #22c55e); }
     </style>
 </head>
-<body class="font-body-md text-body-md antialiased">
-<!-- Desktop Persistent Sidebar Navigation -->
-<aside class="hidden md:flex fixed left-0 top-0 h-screen w-64 flex-col bg-surface-container-lowest border-r border-outline-variant z-40 transition-all">
-<div class="px-6 py-8 flex flex-col h-full">
-<div class="mb-10">
-<h1 class="font-headline-md text-headline-md font-extrabold text-primary tracking-tight">Dodo Land</h1>
-<p class="text-label-sm text-on-surface-variant mt-1">오도현 국어 · 도도랜드 세계관</p>
+<body class="font-body antialiased">
+<div class="hero-bg min-h-screen">
+<!-- NAV -->
+<header class="max-w-[1200px] mx-auto px-5 sm:px-8 pt-6 flex items-center justify-between">
+<a href="index.html" class="flex items-center gap-3">
+<div class="w-11 h-11 rounded-2xl bg-primary-container flex items-center justify-center ring-soft">
+<span class="material-symbols-outlined text-primary-fixed-dim" style="font-variation-settings:'FILL' 1;">menu_book</span>
 </div>
-<nav class="flex-1 space-y-2">
-<a class="flex items-center gap-3 px-4 py-3 rounded-xl bg-primary-container text-on-primary-container font-bold transition-all hover:bg-primary-container/90" href="index.html">
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">school</span>
-<span class="text-label-md font-label-md">강좌</span>
+<div class="leading-tight">
+<p class="font-head font-extrabold text-[19px] tracking-tight"><span class="grad-text">Dodo&nbsp;Land</span> <span class="text-on-surface">오도현 국어</span></p>
+<p class="text-[11px] text-on-surface-variant">기출로 잇고, 프레임으로 이긴다</p>
+</div>
 </a>
-<a class="flex items-center gap-3 px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container-low transition-colors group" href="course.html">
-<span class="material-symbols-outlined group-hover:text-primary transition-colors">campaign</span>
-<span class="text-label-md font-label-md">공지</span>
-</a>
-<a class="flex items-center gap-3 px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container-low transition-colors group" href="assignment.html">
-<span class="material-symbols-outlined group-hover:text-primary transition-colors">assignment</span>
-<span class="text-label-md font-label-md">과제</span>
-</a>
-<a class="flex items-center gap-3 px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container-low transition-colors group" href="index.html">
-<span class="material-symbols-outlined group-hover:text-primary transition-colors">analytics</span>
-<span class="text-label-md font-label-md">프로필</span>
-</a>
+<nav class="hidden md:flex items-center gap-1">
+<a href="course.html" class="px-4 py-2 rounded-full text-on-surface-variant text-sm font-medium hover:text-on-surface hover:bg-white/5 transition">강의 안내</a>
+<a href="#curriculum" class="px-4 py-2 rounded-full text-on-surface-variant text-sm font-medium hover:text-on-surface hover:bg-white/5 transition">커리큘럼</a>
+<a href="#teacher" class="px-4 py-2 rounded-full text-on-surface-variant text-sm font-medium hover:text-on-surface hover:bg-white/5 transition">강사 강점</a>
+<a href="course.html" class="ml-2 px-5 py-2 rounded-full bg-primary text-on-primary text-sm font-bold hover:brightness-110 active:scale-95 transition">수강 문의</a>
 </nav>
-<div class="mt-auto pt-6 border-t border-outline-variant">
-<div class="flex items-center gap-3 p-2 rounded-xl hover:bg-surface-container-low transition-colors cursor-pointer">
-<div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container font-bold">오</div>
-<div>
-<p class="font-label-md text-label-md text-on-surface">오도현 선생님</p>
-<p class="text-[10px] text-on-surface-variant">국어 · 분당·송파 메가스터디</p>
-</div>
-<span class="material-symbols-outlined ml-auto text-on-surface-variant">settings</span>
-</div>
-</div>
-</div>
-</aside>
-<!-- Main Content Shell -->
-<main class="md:ml-64 min-h-screen">
-<header class="flex justify-between items-center w-full px-container-padding h-20 sticky top-0 bg-surface/80 backdrop-blur-md z-30 border-b border-outline-variant/40">
-<div class="flex items-center gap-4">
-<div class="md:hidden w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center">
-<span class="material-symbols-outlined">menu</span>
-</div>
-<div class="hidden md:block">
-<h2 class="font-headline-sm text-headline-sm text-on-surface">대시보드</h2>
-</div>
-</div>
-<div class="flex items-center gap-4">
-<div class="hidden sm:flex items-center px-4 py-2 bg-surface-container rounded-full border border-outline-variant focus-within:border-primary transition-all">
-<span class="material-symbols-outlined text-on-surface-variant text-sm mr-2">search</span>
-<input class="bg-transparent border-none focus:ring-0 text-body-sm w-48 lg:w-64 text-on-surface placeholder:text-on-surface-variant" placeholder="강좌 검색..." type="text"/>
-</div>
-<a href="course.html" class="relative w-10 h-10 rounded-full bg-surface-container-low flex items-center justify-center hover:bg-surface-container-highest transition-colors cursor-pointer">
-<span class="material-symbols-outlined text-primary">notifications</span>
-<span class="absolute top-2 right-2 w-2 h-2 bg-error rounded-full"></span>
-</a>
-</div>
 </header>
-<div class="p-container-padding max-w-[1600px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-stack-gap-lg">
-<div class="lg:col-span-8 flex flex-col gap-stack-gap-lg">
-<section class="relative overflow-hidden rounded-3xl bg-primary-container p-8 lg:p-12 text-on-primary-container shadow-high">
-<div class="absolute -right-20 -top-20 w-64 h-64 bg-secondary/20 rounded-full blur-3xl"></div>
-<div class="absolute -left-10 -bottom-10 w-48 h-48 bg-primary/30 rounded-full blur-2xl"></div>
-<div class="relative z-10 flex flex-col md:flex-row justify-between items-center gap-8">
-<div class="space-y-4 text-center md:text-left">
-<span class="inline-block px-3 py-1 rounded-full bg-white/15 text-on-primary-container text-label-md font-label-md">국어특강 · 3월 재수반</span>
-<h3 class="font-display-lg text-display-lg leading-tight">이기는 프레임[NODE]<br/>— 고소인문하다 🔥</h3>
-<p class="font-body-lg text-body-lg text-on-primary-container/80 max-w-md">
-                                도도랜드 세계관으로 문학·독서 풀이법을 무장하고 1등급에 정착하는 4주 특강. 고전소설 출제요소 내재화 + 인문 독서 실전 루틴 체화.
-                            </p>
-<a href="course.html" class="inline-block mt-4 px-8 py-3 bg-primary-fixed-dim text-[#0c2a16] font-bold rounded-xl shadow-lg hover:scale-105 active:scale-95 transition-all">
-                                수강 안내 보기
-                            </a>
-</div>
-<div class="hidden md:block w-48 h-48 lg:w-64 lg:h-64 rounded-3xl overflow-hidden shadow-2xl rotate-3 border-4 border-white/10">
-<div class="w-full h-full bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDYwOzdmptElIq2zQNzezKgjEYnMGlNbR2fppX9nvx85VoYwkXWZ2Sjtj1F93tyAfcF6vmOdi8rb4vbG74txdvSIcMrcZbsurWM9uVP14igDyEkEf8M97_axHzuxeE8tiQfMwmIfPS-qZtaLlBoHkVPfKo-WH9RbsaJgJVXuenfMk42-5x44TjSUePz2F5MLq6ewvNFMwUY5Calk_i2JXaRjSeSa4hDic0QPs57SldfUv9goROZuZGAazS0uAd5pOE7Lzc52fm1zx5o')"></div>
-</div>
-</div>
-</section>
-<section class="grid grid-cols-1 md:grid-cols-2 gap-stack-gap-md">
-<a href="course.html" class="glass-card p-6 rounded-3xl shadow-low flex flex-col justify-between group cursor-pointer hover:shadow-md hover:border-primary/40 transition-all">
-<div class="flex items-start justify-between mb-4">
-<div class="p-3 bg-primary/15 rounded-2xl">
-<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">menu_book</span>
-</div>
-<div class="px-3 py-1 bg-secondary-container text-on-secondary-container rounded-full text-label-sm font-label-sm">매주 월 18:30</div>
-</div>
-<div>
-<h4 class="font-headline-sm text-headline-sm mb-1 group-hover:text-primary transition-colors">이기는 프레임[NODE]</h4>
-<p class="text-body-sm text-on-surface-variant mb-4">3/16(월) ~ 4/6(월) · 4주 · 18:30~21:50</p>
-<div class="space-y-2">
-<div class="flex justify-between items-end">
-<span class="text-label-sm font-label-sm text-primary">NODE 흐름</span>
-<span class="text-label-sm font-label-sm text-on-surface-variant">고전소설 → 고전시가 → 현대시</span>
-</div>
-<div class="h-2 w-full bg-surface-container rounded-full overflow-hidden">
-<div class="h-full bg-primary rounded-full transition-all duration-1000" style="width: 50%"></div>
-</div>
-</div>
-</div>
-</a>
-<div class="glass-card p-6 rounded-3xl shadow-low flex flex-col justify-between border-l-4 border-error">
-<div class="flex items-start justify-between mb-4">
-<div class="p-3 bg-error/15 rounded-2xl">
-<span class="material-symbols-outlined text-error">assignment_late</span>
-</div>
-<div class="px-3 py-1 bg-error-container text-on-error-container rounded-full text-label-sm font-label-sm">1주차 과제</div>
-</div>
-<div>
-<h4 class="font-headline-sm text-headline-sm mb-1">기준 세우기 — 현장 과제</h4>
-<p class="text-body-sm text-on-surface-variant mb-4">고전소설 출제장치 기준 / 인문동양 답 기준</p>
-<a href="submit.html" class="block text-center w-full py-2 bg-primary text-on-primary rounded-lg text-label-md font-label-md hover:brightness-110 transition-all">
-                                제출하기
-                            </a>
-</div>
-</div>
-</section>
-<section class="space-y-stack-gap-md">
-<div class="flex items-center justify-between">
-<h3 class="font-headline-md text-headline-md text-on-surface">개설 강좌</h3>
-<a class="text-primary font-label-md text-label-md hover:underline" href="course.html">전체 보기</a>
-</div>
-<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-gutter">
-<a href="course.html" class="bg-surface-container-lowest rounded-3xl overflow-hidden shadow-low border border-outline-variant/30 hover:border-primary/40 hover:shadow-lg transition-all group">
-<div class="h-32 relative overflow-hidden">
-<div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD3UxLkvj63TE7BWCJnXd5_uiRUBLXUDAbYPAJdRxgr4tEMWsYQP09vveuk5l_2GZUiHus4LZoPOh0BU-RXo2EEzxbNSZ6yjVlgMFISB-7WPP7SVppx56ruizgeRw2yN75EKukroJLtxnPUrE3LpdYpsw_g8zJLMruSJtMXJtBEMOG5Nv_ebEI4mENDaE7iR6LVofrscgo_QnEKR3nQy_3woqv50jM7nsSAee2gsuulNmkRKCaoMNZT6pMBgWsJKpQnJHFWO8oI3T-s')"></div>
-<div class="absolute top-3 right-3 px-2 py-1 bg-black/50 backdrop-blur-md text-white rounded-lg text-[10px] font-bold">4주 특강</div>
-</div>
-<div class="p-5 space-y-3">
-<h5 class="font-headline-sm text-headline-sm text-[16px] line-clamp-1">이기는 프레임[NODE] — 고소인문하다</h5>
-<div class="flex items-center gap-2 text-on-surface-variant">
-<span class="material-symbols-outlined text-sm">person</span>
-<span class="text-label-sm">오도현</span>
-</div>
-<div class="pt-2">
-<div class="h-1 w-full bg-surface-container rounded-full">
-<div class="h-full bg-primary rounded-full" style="width: 100%"></div>
-</div>
-<div class="flex items-center justify-between mt-2">
-<span class="text-primary font-label-sm">고전소설 · 인문동양</span>
-<span class="text-on-surface-variant font-label-sm">205,000원</span>
-</div>
-</div>
-</div>
-</a>
-<a href="course.html" class="bg-surface-container-lowest rounded-3xl overflow-hidden shadow-low border border-outline-variant/30 hover:border-primary/40 hover:shadow-lg transition-all group">
-<div class="h-32 relative overflow-hidden">
-<div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAzF3cw4s-vfS5ki0lucEUPbGf17glAxin8QAcImx1TU1xbDsO5YAc_2DhjvOk9lTOIRIXtrCc0rvhI2VZVR_aK3U1MHavXVyaDhbfjOqaUG1fcSNxdAiM-ma2hDp3PqbHgduoHxgH8-Y2YFZ2BmxROAC-VH5_wg4RY_dL8CZ4-3qNDj4SiJY8TWy9Shx0Ys93FocwsieMcEKwQ9PTyHt87AzTpQCDaEnMXE3Jj99mdbYiWcJUdgi4hvOq5KFQGfKy35dNTgHeZxzhk')"></div>
-<div class="absolute top-3 right-3 px-2 py-1 bg-black/50 backdrop-blur-md text-white rounded-lg text-[10px] font-bold">4주 · 여름</div>
-</div>
-<div class="p-5 space-y-3">
-<h5 class="font-headline-sm text-headline-sm text-[16px] line-clamp-1">2026 썸머 커리큘럼</h5>
-<div class="flex items-center gap-2 text-on-surface-variant">
-<span class="material-symbols-outlined text-sm">person</span>
-<span class="text-label-sm">오도현</span>
-</div>
-<div class="pt-2">
-<div class="h-1 w-full bg-surface-container rounded-full">
-<div class="h-full bg-secondary rounded-full" style="width: 60%"></div>
-</div>
-<div class="flex items-center justify-between mt-2">
-<span class="text-secondary font-label-sm">산문·운문·연계·실전</span>
-<span class="text-on-surface-variant font-label-sm">오메가 모의고사</span>
-</div>
-</div>
-</div>
-</a>
-<a href="assignment.html" class="bg-surface-container-lowest rounded-3xl overflow-hidden shadow-low border border-outline-variant/30 hover:border-primary/40 hover:shadow-lg transition-all group">
-<div class="h-32 relative overflow-hidden">
-<div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBtC9psNoM-ASJwNWMqxysbkTblN3IBUR6nHYWz4aX5Qp8Dv-hWy0YqARMh_n6cCJ7rw1lga08k5a6p2jt7B-FnYJ4Xvlo6xUQqZqbK977j9UUcVpPR4RTejoGjwSCH5BnCSf_Ll_5e245Dx3tbLIA3FFOPSsNaxuP_fwIqvBA0nmrKH299nrz-4jpPSaJkFDYJ9gObQq7cAj02RTvu0Y8iir8aP57BfghtRowA_F3Hi48swn45ZFl8esArwfq4ONoTGAUlmht-KH-I')"></div>
-<div class="absolute top-3 right-3 px-2 py-1 bg-black/50 backdrop-blur-md text-white rounded-lg text-[10px] font-bold">주차별</div>
-</div>
-<div class="p-5 space-y-3">
-<h5 class="font-headline-sm text-headline-sm text-[16px] line-clamp-1">단과 주차별 진도 (고전소설)</h5>
-<div class="flex items-center gap-2 text-on-surface-variant">
-<span class="material-symbols-outlined text-sm">person</span>
-<span class="text-label-sm">오도현</span>
-</div>
-<div class="pt-2">
-<div class="h-1 w-full bg-surface-container rounded-full">
-<div class="h-full bg-primary rounded-full" style="width: 25%"></div>
-</div>
-<div class="flex items-center justify-between mt-2">
-<span class="text-on-surface-variant font-label-sm">사씨남정기 · 박태보전</span>
-<span class="text-on-surface-variant font-label-sm">개강 2/4</span>
-</div>
-</div>
-</div>
-</a>
-</div>
-</section>
-</div>
-<div class="lg:col-span-4 flex flex-col gap-stack-gap-lg">
-<section class="bg-surface-container-lowest rounded-3xl p-6 shadow-sm border border-outline-variant/40">
-<div class="flex items-center justify-between mb-6">
-<h3 class="font-headline-sm text-headline-sm text-on-surface">강사 이력</h3>
-<span class="p-2 bg-secondary/15 rounded-full">
-<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">workspace_premium</span>
+
+<!-- HERO -->
+<main class="max-w-[1200px] mx-auto px-5 sm:px-8 pt-10 lg:pt-16 pb-20">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-stretch">
+<!-- LEFT -->
+<div class="lg:col-span-7 flex flex-col">
+<span class="inline-flex self-start items-center gap-2 px-4 py-1.5 rounded-full border border-primary/30 bg-primary/10 text-primary-fixed-dim text-[13px] font-semibold mb-6">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span> 2026 · 재수 단과 국어특강
 </span>
+<h1 class="font-head font-extrabold tracking-tight text-[40px] sm:text-[52px] leading-[1.08]">
+문학·독서 풀이법,<br/><span class="grad-text">마지막 한 수가 됩니다.</span>
+</h1>
+<p class="mt-5 text-on-surface-variant text-[16px] sm:text-[17px] leading-relaxed max-w-xl">
+도도랜드 세계관으로 고전소설 출제요소를 내재화하고, 인문 독서의 실전 루틴을 체화합니다. 작품 암기가 아니라 <span class="text-on-surface font-semibold">#출제요소 코드</span>로 처리해 1등급에 정착하는 4주 특강.
+</p>
+
+<!-- STAT CHIPS -->
+<div class="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-3">
+<div class="card rounded-2xl px-4 py-4">
+<p class="font-head font-extrabold text-2xl grad-text leading-none">4주</p>
+<p class="mt-2 text-[12px] text-on-surface-variant">집중 특강</p>
 </div>
-<div class="space-y-4">
-<div class="flex items-center gap-4 p-3 rounded-2xl bg-surface-container-low border border-transparent hover:border-secondary transition-all cursor-pointer group">
-<div class="w-12 h-12 bg-surface-container-high rounded-xl flex items-center justify-center shadow-sm">
-<span class="material-symbols-outlined text-secondary">verified</span>
+<div class="card rounded-2xl px-4 py-4">
+<p class="font-head font-extrabold text-2xl grad-text leading-none">40편</p>
+<p class="mt-2 text-[12px] text-on-surface-variant">고전소설 분석</p>
 </div>
-<div class="flex-1">
-<p class="font-label-md text-label-md text-on-surface">(현) 분당·송파 메가스터디학원</p>
-<p class="text-[10px] text-on-surface-variant">국어 대표 강사</p>
+<div class="card rounded-2xl px-4 py-4">
+<p class="font-head font-extrabold text-2xl grad-text leading-none">2026</p>
+<p class="mt-2 text-[12px] text-on-surface-variant">최신 기출 반영</p>
+</div>
+<a href="course.html" class="rounded-2xl px-4 py-4 bg-kakao text-on-kakao flex flex-col justify-between hover:brightness-105 active:scale-95 transition group">
+<span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1;">chat_bubble</span>
+<span class="mt-1 text-[13px] font-bold flex items-center gap-1">카톡 상담 <span class="material-symbols-outlined text-[16px] group-hover:translate-x-0.5 transition-transform">arrow_forward</span></span>
+</a>
+</div>
+
+<!-- INFO CARD 1 -->
+<a href="course.html" class="card card-glow rounded-2xl mt-5 p-5 flex items-center gap-4 transition group">
+<span class="shrink-0 px-3 py-1.5 rounded-lg bg-primary/15 text-primary-fixed-dim text-[12px] font-bold">수업 안내</span>
+<div class="flex-1 min-w-0">
+<p class="font-head font-bold text-on-surface text-[16px] truncate">[Dodo Land] 이기는 프레임[NODE] — 고소인문하다</p>
+<p class="text-on-surface-variant text-[13px] mt-0.5">매주 월요일 18:30~21:50 · 주 1회 · 4주 · 분당/송파 메가스터디</p>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary group-hover:translate-x-0.5 transition">arrow_forward</span>
+</a>
+
+<!-- INFO CARD 2 -->
+<a href="#teacher" class="card card-glow rounded-2xl mt-3 p-5 flex items-center gap-4 transition group">
+<span class="shrink-0 w-9 h-9 rounded-lg bg-tertiary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-tertiary" style="font-variation-settings:'FILL' 1;">emoji_events</span>
+</span>
+<div class="flex-1 min-w-0">
+<p class="font-head font-bold text-on-surface text-[16px]">3점 문제의 최강자 · 강사 강점 보기</p>
+<p class="text-on-surface-variant text-[13px] mt-0.5">고전·현대문학 / 인문사회·과학기술 독서 풀이 프레임 →</p>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-tertiary group-hover:translate-x-0.5 transition">arrow_forward</span>
+</a>
+</div>
+
+<!-- RIGHT : 2 feature cards -->
+<div class="lg:col-span-5 grid grid-cols-1 sm:grid-cols-2 gap-4">
+<!-- Instructor -->
+<div class="card card-glow rounded-3xl p-6 flex flex-col items-center text-center transition">
+<div class="avatar-ring p-[3px] rounded-full">
+<div class="w-24 h-24 rounded-full bg-surface-container-high flex items-center justify-center">
+<span class="font-head font-extrabold text-4xl grad-text">오</span>
 </div>
 </div>
-<div class="flex items-center gap-4 p-3 rounded-2xl bg-surface-container-low border border-transparent hover:border-secondary transition-all cursor-pointer group">
-<div class="w-12 h-12 bg-surface-container-high rounded-xl flex items-center justify-center shadow-sm">
-<span class="material-symbols-outlined text-secondary">verified</span>
+<span class="mt-5 px-3 py-1 rounded-full bg-primary/12 text-primary-fixed-dim text-[11px] font-bold">[Dodo Land] 국어 대표 강사</span>
+<p class="mt-3 font-head font-extrabold text-2xl text-on-surface">오도현<span class="text-primary">T</span></p>
+<p class="mt-2 text-[13px] text-on-surface-variant leading-relaxed">분당·송파 메가스터디 / 전 대치 이강학원<br/>「기출의 바이블 — 독서」 저자</p>
+<a href="course.html" class="mt-5 w-full py-3 rounded-xl bg-primary text-on-primary text-[13px] font-bold hover:brightness-110 active:scale-95 transition">이기는 프레임[NODE] 보기</a>
 </div>
-<div class="flex-1">
-<p class="font-label-md text-label-md text-on-surface">(전) 대치 이강학원</p>
-<p class="text-[10px] text-on-surface-variant">국어 강사</p>
+<!-- Big number / value -->
+<div class="card card-glow rounded-3xl p-6 flex flex-col text-center transition">
+<p class="font-head font-extrabold text-5xl grad-text leading-none mt-2">NODE</p>
+<p class="mt-3 text-[13px] font-bold text-on-surface">문학·독서 통합 프레임</p>
+<p class="mt-3 text-[12px] text-on-surface-variant leading-relaxed flex-1">
+고전소설 → 고전시가 → 현대시 → 갈래복합·현대소설 / 인문(동양) → 인문(서양) → 사회·경제 → 과학기술. <span class="text-on-surface font-semibold">하나의 흐름</span>으로 풀이법을 무장합니다.
+</p>
+<a href="#curriculum" class="mt-5 w-full py-3 rounded-xl border border-primary/35 text-primary-fixed-dim text-[13px] font-bold hover:bg-primary/10 active:scale-95 transition">커리큘럼 보기</a>
 </div>
-</div>
-<div class="flex items-center gap-4 p-3 rounded-2xl bg-surface-container-low border border-transparent hover:border-secondary transition-all cursor-pointer group">
-<div class="w-12 h-12 bg-surface-container-high rounded-xl flex items-center justify-center shadow-sm">
-<span class="material-symbols-outlined text-secondary">menu_book</span>
-</div>
-<div class="flex-1">
-<p class="font-label-md text-label-md text-on-surface">「기출의 바이블 — 독서」 저자</p>
-<p class="text-[10px] text-on-surface-variant">3점 문제의 최강자</p>
-</div>
-</div>
-</div>
-<a href="course.html" class="block text-center w-full mt-6 py-3 border-2 border-primary/30 text-primary rounded-xl text-label-md font-label-md hover:bg-primary hover:text-on-primary transition-all">
-                        강사 강점 자세히 보기
-                    </a>
-</section>
-<section class="glass-card rounded-3xl p-6">
-<h3 class="font-label-md text-label-md text-on-surface-variant mb-4 uppercase tracking-widest">도도랜드 세계관 흐름</h3>
-<div class="flex justify-between items-center gap-1">
-<div id="activity-grid" class="flex gap-1 flex-wrap"></div>
-</div>
-<div class="mt-4 flex items-center justify-between text-[10px] text-on-surface-variant uppercase font-bold">
-<span>노드</span>
-<div class="flex gap-1">
-<div class="w-2 h-2 bg-surface-container rounded-sm"></div>
-<div class="w-2 h-2 bg-primary/30 rounded-sm"></div>
-<div class="w-2 h-2 bg-primary/50 rounded-sm"></div>
-<div class="w-2 h-2 bg-primary/70 rounded-sm"></div>
-<div class="w-2 h-2 bg-primary rounded-sm"></div>
-</div>
-<span>파파도</span>
-</div>
-</section>
 </div>
 </div>
 </main>
-<a href="submit.html" class="fixed bottom-10 right-10 w-16 h-16 bg-primary text-on-primary rounded-full shadow-2xl flex items-center justify-center hover:scale-110 active:scale-95 transition-all z-50 group">
-<span class="material-symbols-outlined text-3xl group-hover:rotate-90 transition-transform">add</span>
-</a>
-<!-- Mobile Navigation -->
-<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 py-3 pb-safe bg-surface shadow-lg border-t border-outline-variant/40">
-<a class="flex flex-col items-center justify-center bg-primary-container text-on-primary-container rounded-full px-6 py-2 transition-transform active:scale-90" href="index.html">
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">school</span>
-<span class="text-label-md font-label-md">강좌</span>
-</a>
-<a class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-container-highest rounded-full p-2 transition-colors" href="course.html">
-<span class="material-symbols-outlined">campaign</span>
-<span class="text-label-md font-label-md">공지</span>
-</a>
-<a class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-container-highest rounded-full p-2 transition-colors" href="assignment.html">
-<span class="material-symbols-outlined">assignment</span>
-<span class="text-label-md font-label-md">과제</span>
-</a>
-<a class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-container-highest rounded-full p-2 transition-colors" href="index.html">
-<span class="material-symbols-outlined">analytics</span>
-<span class="text-label-md font-label-md">프로필</span>
-</a>
-</nav>
-<script>
-        (function () {
-            const colors = ['bg-surface-container', 'bg-primary/30', 'bg-primary/50', 'bg-primary/70', 'bg-primary'];
-            const grid = document.getElementById('activity-grid');
-            const pattern = [0,2,3,1,4,2,1,0,3,4,2,1,3,0,2,4,3,1,2,0,4,3,2,1,0,2,4,3,1,2,3,0,4,2,1];
-            pattern.forEach(i => {
-                const d = document.createElement('div');
-                d.className = `w-3 h-3 rounded-sm ${colors[i]}`;
-                grid.appendChild(d);
-            });
-        })();
+</div>
 
-        document.addEventListener('DOMContentLoaded', () => {
-            const cards = document.querySelectorAll('.glass-card, section');
-            cards.forEach((card, index) => {
-                card.style.opacity = '0';
-                card.style.transform = 'translateY(20px)';
-                card.style.transition = 'all 0.6s cubic-bezier(0.2, 0.8, 0.2, 1)';
-                setTimeout(() => {
-                    card.style.opacity = '1';
-                    card.style.transform = 'translateY(0)';
-                }, 80 * index);
-            });
-        });
-    </script>
+<!-- CURRICULUM ROADMAP -->
+<section id="curriculum" class="max-w-[1200px] mx-auto px-5 sm:px-8 py-20">
+<div class="text-center mb-12 reveal">
+<p class="text-primary-fixed-dim font-bold text-sm tracking-widest uppercase">4-Week Roadmap</p>
+<h2 class="font-head font-extrabold text-3xl sm:text-4xl mt-3">이기는 프레임[NODE] 주차별 로드맵</h2>
+<p class="text-on-surface-variant mt-3">기준을 세우고 → 판별하고 → 결정하고 → 통합한다.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+<div class="card card-glow rounded-2xl p-6 transition reveal">
+<div class="flex items-center justify-between">
+<span class="font-head font-extrabold text-lg grad-text">1주차</span>
+<span class="text-[12px] text-on-surface-variant">3/16(월)</span>
+</div>
+<h3 class="font-head font-bold text-on-surface text-lg mt-4">기준 세우기</h3>
+<p class="text-on-surface-variant text-[13px] mt-2 leading-relaxed">고전소설 출제장치 기준 / 인문동양 답 기준을 세운다.</p>
+</div>
+<div class="card card-glow rounded-2xl p-6 transition reveal">
+<div class="flex items-center justify-between">
+<span class="font-head font-extrabold text-lg grad-text">2주차</span>
+<span class="text-[12px] text-on-surface-variant">3/23(월)</span>
+</div>
+<h3 class="font-head font-bold text-on-surface text-lg mt-4">판별 훈련</h3>
+<p class="text-on-surface-variant text-[13px] mt-2 leading-relaxed">고전소설 선지 판별 / 인문동양 논지·개념 판별.</p>
+</div>
+<div class="card card-glow rounded-2xl p-6 transition reveal">
+<div class="flex items-center justify-between">
+<span class="font-head font-extrabold text-lg grad-text">3주차</span>
+<span class="text-[12px] text-on-surface-variant">3/30(월)</span>
+</div>
+<h3 class="font-head font-bold text-on-surface text-lg mt-4">결정 루틴</h3>
+<p class="text-on-surface-variant text-[13px] mt-2 leading-relaxed">고전소설·인문동양 정답 결정 프로토콜.</p>
+</div>
+<div class="card card-glow rounded-2xl p-6 transition reveal">
+<div class="flex items-center justify-between">
+<span class="font-head font-extrabold text-lg grad-text">4주차</span>
+<span class="text-[12px] text-on-surface-variant">4/6(월)</span>
+</div>
+<h3 class="font-head font-bold text-on-surface text-lg mt-4">링크 총정리</h3>
+<p class="text-on-surface-variant text-[13px] mt-2 leading-relaxed">고전소설×인문동양 링크프레임 통합 복기.</p>
+</div>
+</div>
+</section>
+
+<!-- TEACHER STRENGTHS -->
+<section id="teacher" class="max-w-[1200px] mx-auto px-5 sm:px-8 py-12">
+<div class="text-center mb-12 reveal">
+<p class="text-primary-fixed-dim font-bold text-sm tracking-widest uppercase">Why 오도현</p>
+<h2 class="font-head font-extrabold text-3xl sm:text-4xl mt-3">과목별 강점 — 해설지에 없는 최단 루트</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="card card-glow rounded-2xl p-6 flex gap-4 transition reveal">
+<span class="shrink-0 w-12 h-12 rounded-xl bg-primary/12 flex items-center justify-center text-primary-fixed-dim"><span class="material-symbols-outlined">history_edu</span></span>
+<div>
+<h3 class="font-head font-bold text-on-surface text-lg">고전문학</h3>
+<p class="text-on-surface-variant text-[14px] mt-1.5 leading-relaxed">반복되는 주제·구조를 묶어 공통 포인트를 추출 → '작품별 암기'가 아니라 <span class="text-on-surface font-semibold">#출제요소 코드</span>로 처리한다.</p>
+</div>
+</div>
+<div class="card card-glow rounded-2xl p-6 flex gap-4 transition reveal">
+<span class="shrink-0 w-12 h-12 rounded-xl bg-primary/12 flex items-center justify-center text-primary-fixed-dim"><span class="material-symbols-outlined">auto_stories</span></span>
+<div>
+<h3 class="font-head font-bold text-on-surface text-lg">현대문학</h3>
+<p class="text-on-surface-variant text-[14px] mt-1.5 leading-relaxed">처음 보는 작품에도 바로 적용되는 <span class="text-on-surface font-semibold">#행동강령</span>을 구축해, 흔들림 없이 독해한다.</p>
+</div>
+</div>
+<div class="card card-glow rounded-2xl p-6 flex gap-4 transition reveal">
+<span class="shrink-0 w-12 h-12 rounded-xl bg-secondary/12 flex items-center justify-center text-secondary"><span class="material-symbols-outlined">menu_book</span></span>
+<div>
+<h3 class="font-head font-bold text-on-surface text-lg">독서 — 인문·사회</h3>
+<p class="text-on-surface-variant text-[14px] mt-1.5 leading-relaxed"><span class="text-on-surface font-semibold">#1문단 1원칙</span>으로 방향성(주제·방법)을 먼저 세팅하고 구조를 가볍게 정리해, 선지 판단이 쉬워지는 프레임을 제공한다.</p>
+</div>
+</div>
+<div class="card card-glow rounded-2xl p-6 flex gap-4 transition reveal">
+<span class="shrink-0 w-12 h-12 rounded-xl bg-secondary/12 flex items-center justify-center text-secondary"><span class="material-symbols-outlined">science</span></span>
+<div>
+<h3 class="font-head font-bold text-on-surface text-lg">독서 — 과학·기술</h3>
+<p class="text-on-surface-variant text-[14px] mt-1.5 leading-relaxed">막히는 순간에도 <span class="text-on-surface font-semibold">#핵심 표지 체계</span>로 선지→지문 근거를 되찾아 풀게 해, 시간 단축과 효율을 동시에 만든다.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- CTA BAND -->
+<section class="max-w-[1200px] mx-auto px-5 sm:px-8 py-16">
+<div class="relative overflow-hidden rounded-3xl bg-primary-container p-10 sm:p-14 text-center ring-soft reveal">
+<div class="absolute -right-16 -top-16 w-64 h-64 bg-primary/30 rounded-full blur-3xl"></div>
+<div class="absolute -left-10 -bottom-16 w-56 h-56 bg-secondary/20 rounded-full blur-3xl"></div>
+<div class="relative z-10">
+<h2 class="font-head font-extrabold text-3xl sm:text-4xl text-on-primary-container">도도랜드에서, 1등급에 정착하세요</h2>
+<p class="text-on-primary-container/80 mt-4 max-w-xl mx-auto">문학·독서 모두 풀이법을 무장하는 4주. 수강료 205,000원 · 교재 19,000원.</p>
+<div class="mt-8 flex flex-wrap items-center justify-center gap-3">
+<a href="course.html" class="px-7 py-3.5 rounded-xl bg-primary-fixed-dim text-[#0c2a16] font-bold hover:scale-105 active:scale-95 transition shadow-lg">강의 자세히 보기</a>
+<a href="course.html" class="px-7 py-3.5 rounded-xl bg-kakao text-on-kakao font-bold hover:brightness-105 active:scale-95 transition flex items-center gap-2"><span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1;">chat_bubble</span> 카톡으로 상담하기</a>
+</div>
+</div>
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer class="border-t border-outline-variant">
+<div class="max-w-[1200px] mx-auto px-5 sm:px-8 py-10 flex flex-col sm:flex-row items-center justify-between gap-4">
+<div>
+<p class="font-head font-extrabold text-lg"><span class="grad-text">Dodo Land</span> <span class="text-on-surface">오도현 국어</span></p>
+<p class="text-on-surface-variant text-[13px] mt-1">분당·송파 메가스터디 · 이기는 프레임[NODE] — 고소인문하다</p>
+</div>
+<div class="flex items-center gap-4 text-on-surface-variant text-[13px]">
+<a href="course.html" class="hover:text-on-surface transition">강의 안내</a>
+<a href="assignment.html" class="hover:text-on-surface transition">과제</a>
+<a href="#curriculum" class="hover:text-on-surface transition">커리큘럼</a>
+</div>
+</div>
+</footer>
+
+<script>
+    const io = new IntersectionObserver((entries) => {
+        entries.forEach((e, i) => { if (e.isIntersecting) { setTimeout(() => e.target.classList.add('in'), (i % 4) * 80); io.unobserve(e.target); } });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
 </body></html>
