@@ -2,7 +2,7 @@
 <html class="dark" lang="ko"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Submit Assignment | LMS Academy</title>
+<title>과제 제출 | 도도랜드</title>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
@@ -39,26 +39,24 @@
 <header class="bg-surface/90 backdrop-blur-md flex justify-between items-center w-full px-container-padding h-16 shadow-sm sticky top-0 z-50 border-b border-outline-variant/40">
 <div class="flex items-center gap-3">
 <a href="assignment.html" class="material-symbols-outlined text-on-surface-variant hover:bg-surface-container-low p-2 rounded-full transition-colors active:scale-95">arrow_back</a>
-<a href="index.html" class="font-headline-md text-headline-md font-bold text-primary">LMS Academy</a>
+<a href="index.html" class="font-headline-md text-headline-md font-bold text-primary">Dodo Land</a>
 </div>
 <div class="flex items-center gap-2">
 <a href="course.html" class="material-symbols-outlined text-on-surface-variant p-2 hover:bg-surface-container-low rounded-full transition-colors">notifications</a>
-<div class="w-8 h-8 rounded-full bg-primary-fixed flex items-center justify-center overflow-hidden">
-<img class="w-full h-full object-cover" alt="Profile" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAW5rZlYdNRyqkvdhOhNLyuUhqCTfHIjT7tuAd4YMrE9I5ajXSEUw5GKR25ORar9PYz_-zC-C51-9lyg7HCfVHgj4UzU8NTbtHpTyP5enTOUrlKqDdi4rKmZkebpPvGVazjoNKVZCid_K2ul43GiKwC3LOjqGce0f7dnF_-4Rgxa8PDPg6NRraB4MstdMcbFiHeaDDffbIQjGyRj6RyD6TzorpcTvLqfpnyCyIk1oW6hClZc3fKgIB-bTyf7yCU6orYzBIMAHv6X_cQ"/>
-</div>
+<div class="w-8 h-8 rounded-full bg-secondary-container flex items-center justify-center overflow-hidden text-on-secondary-container font-bold text-label-md">오</div>
 </div>
 </header>
 <main class="max-w-2xl mx-auto px-container-padding pt-stack-gap-lg">
 <nav class="flex items-center gap-1 text-label-md font-label-md text-on-surface-variant mb-stack-gap-md">
-<a href="assignment.html" class="hover:text-primary transition-colors">Structural Design Project</a>
+<a href="assignment.html" class="hover:text-primary transition-colors">기준 세우기</a>
 <span class="material-symbols-outlined text-[16px]">chevron_right</span>
-<span class="text-on-surface">Submit</span>
+<span class="text-on-surface">제출</span>
 </nav>
 <section class="mb-stack-gap-lg">
 <div class="flex flex-col gap-stack-gap-sm mb-stack-gap-md">
-<span class="inline-flex items-center self-start px-3 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label-md text-label-md uppercase">Civil Engineering 302</span>
-<h1 class="font-display-lg text-display-lg text-on-surface tracking-tight">Submit Assignment</h1>
-<p class="text-body-md text-on-surface-variant">Upload your files for <strong class="text-on-surface">Structural Design Project</strong>. Deadline: Oct 27, 23:59.</p>
+<span class="inline-flex items-center self-start px-3 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label-md text-label-md uppercase">이기는 프레임[NODE] · 1주차</span>
+<h1 class="font-display-lg text-display-lg text-on-surface tracking-tight">과제 제출</h1>
+<p class="text-body-md text-on-surface-variant"><strong class="text-on-surface">기준 세우기</strong> 과제 파일을 업로드하세요. 마감: 3/23(월) 수업 전.</p>
 </div>
 </section>
 
@@ -67,48 +65,48 @@
 <div class="w-16 h-16 mx-auto rounded-2xl bg-surface-container flex items-center justify-center text-primary mb-4">
 <span class="material-symbols-outlined text-[36px]">cloud_upload</span>
 </div>
-<p class="font-headline-sm text-headline-sm text-on-surface mb-1">Drag &amp; drop files here</p>
-<p class="text-body-sm text-on-surface-variant mb-4">or click to browse from your device</p>
+<p class="font-headline-sm text-headline-sm text-on-surface mb-1">여기로 파일을 끌어다 놓으세요</p>
+<p class="text-body-sm text-on-surface-variant mb-4">또는 클릭해서 기기에서 선택</p>
 <span class="inline-flex items-center gap-2 px-5 py-2 bg-primary text-on-primary rounded-lg text-label-md font-label-md">
-<span class="material-symbols-outlined text-[18px]">attach_file</span> Choose Files
+<span class="material-symbols-outlined text-[18px]">attach_file</span> 파일 선택
 </span>
-<p class="text-label-sm text-on-surface-variant mt-4">Accepted: PDF, ZIP, XLSX • Max 200 MB • Naming: <em class="text-on-surface-variant">LastName_Project1.zip</em></p>
+<p class="text-label-sm text-on-surface-variant mt-4">허용: PDF, 이미지(JPG/PNG), ZIP • 최대 200MB • 손정리본은 사진으로 제출 가능</p>
 <input id="fileInput" type="file" multiple class="hidden"/>
 </div>
 </section>
 
 <section id="fileSection" class="mb-stack-gap-lg hidden">
-<h2 class="font-headline-sm text-headline-sm text-on-surface mb-stack-gap-sm">Selected Files</h2>
+<h2 class="font-headline-sm text-headline-sm text-on-surface mb-stack-gap-sm">선택한 파일</h2>
 <div id="fileList" class="flex flex-col gap-stack-gap-sm"></div>
 </section>
 
 <section class="mb-stack-gap-lg">
-<h2 class="font-headline-sm text-headline-sm text-on-surface mb-stack-gap-sm">Submission Comment <span class="text-on-surface-variant font-body-sm text-body-sm">(optional)</span></h2>
+<h2 class="font-headline-sm text-headline-sm text-on-surface mb-stack-gap-sm">제출 코멘트 <span class="text-on-surface-variant font-body-sm text-body-sm">(선택)</span></h2>
 <div class="bg-surface-container-lowest p-2 rounded-xl border border-outline-variant/40 shadow-sm">
-<textarea id="comment" rows="4" placeholder="Add a note for your instructor..." class="w-full bg-transparent border-none focus:ring-0 resize-none text-body-md p-2 text-on-surface placeholder:text-on-surface-variant"></textarea>
+<textarea id="comment" rows="4" placeholder="선생님께 남길 메모를 적어주세요..." class="w-full bg-transparent border-none focus:ring-0 resize-none text-body-md p-2 text-on-surface placeholder:text-on-surface-variant"></textarea>
 </div>
 </section>
 
 <section class="mb-stack-gap-lg">
 <label class="flex items-start gap-3 p-4 bg-surface-container-low rounded-xl border border-outline-variant/30 cursor-pointer">
 <input id="pledge" type="checkbox" class="mt-0.5 w-5 h-5 rounded bg-surface-container text-primary focus:ring-primary border-outline"/>
-<span class="text-body-sm text-on-surface-variant">I confirm this submission is my own work and complies with the academic integrity policy of <strong class="text-on-surface">Civil Engineering 302</strong>.</span>
+<span class="text-body-sm text-on-surface-variant">본 제출물은 제가 직접 작성한 것이며, <strong class="text-on-surface">이기는 프레임[NODE]</strong> 과제 규정을 준수함을 확인합니다.</span>
 </label>
 </section>
 </main>
 
 <div class="fixed bottom-0 left-0 w-full bg-surface/85 backdrop-blur-md border-t border-outline-variant/40 px-container-padding py-6 z-50">
 <div class="max-w-2xl mx-auto flex items-center gap-4">
-<a href="assignment.html" class="px-5 py-4 rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-low transition-colors">Cancel</a>
+<a href="assignment.html" class="px-5 py-4 rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-low transition-colors">취소</a>
 <button id="submitBtn" disabled class="flex-1 bg-primary text-on-primary py-4 rounded-lg font-headline-sm text-headline-sm shadow-md hover:brightness-110 transition-all active:scale-95 flex items-center justify-center gap-2 disabled:opacity-40 disabled:cursor-not-allowed disabled:shadow-none">
-<span class="material-symbols-outlined">send</span> Submit Assignment
+<span class="material-symbols-outlined">send</span> 제출하기
 </button>
 </div>
 </div>
 
 <div id="toast" class="fixed bottom-28 left-1/2 -translate-x-1/2 translate-y-4 opacity-0 pointer-events-none transition-all bg-surface-container-highest text-on-surface px-6 py-3 rounded-full shadow-2xl border border-outline-variant/50 flex items-center gap-2 z-50">
 <span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
-<span class="font-label-md text-label-md">Assignment submitted successfully!</span>
+<span class="font-label-md text-label-md">과제가 제출되었습니다!</span>
 </div>
 
 <script>
@@ -125,6 +123,7 @@
         const e = name.split('.').pop().toLowerCase();
         if (e === 'pdf') return 'picture_as_pdf';
         if (e === 'zip' || e === 'rar') return 'folder_zip';
+        if (e === 'jpg' || e === 'jpeg' || e === 'png') return 'image';
         if (e === 'xlsx' || e === 'csv') return 'table_chart';
         return 'description';
     };
@@ -164,13 +163,12 @@
     dropzone.addEventListener('drop', e => addFiles(e.dataTransfer.files));
 
     submitBtn.addEventListener('click', () => {
-        const original = submitBtn.innerHTML;
-        submitBtn.innerHTML = '<span class="material-symbols-outlined animate-spin">progress_activity</span> Uploading...';
+        submitBtn.innerHTML = '<span class="material-symbols-outlined animate-spin">progress_activity</span> 업로드 중...';
         submitBtn.disabled = true;
         setTimeout(() => {
             const toast = document.getElementById('toast');
             toast.classList.remove('opacity-0','translate-y-4','pointer-events-none');
-            submitBtn.innerHTML = '<span class="material-symbols-outlined" style="font-variation-settings:\'FILL\' 1;">task_alt</span> Submitted';
+            submitBtn.innerHTML = '<span class="material-symbols-outlined" style="font-variation-settings:\'FILL\' 1;">task_alt</span> 제출 완료';
             setTimeout(() => { window.location.href = 'assignment.html'; }, 1600);
         }, 1200);
     });
